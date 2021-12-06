@@ -297,7 +297,7 @@ export default function Home() {
             })
           }
         }
-        className = "py-2 mt-20 mb-4 text-lg font-bold text-white rounded-lg w-56 bg-blue-600 hover:bg-blue-800" > Change to Risky Strategy < /button> <
+        className = "py-2 mt-20 mb-4 text-lg font-bold text-white rounded-lg w-56 bg-blue-600 hover:bg-blue-800" > Change to Conservative Strategy < /button> <
         /p>
       )
     } {
