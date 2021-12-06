@@ -35,6 +35,7 @@ export default function Home() {
   const [currentTransaction, setCurrentTransaction] = useState()
   const [inputError, setInputError] = useState("")
   const [waitingForTx, setWaitingForTx] = useState("")
+  const [installMetamask, setInstallMetamask] = useState(false)
 
   const gas = 1e6
   const gasPrice = Web3.utils.toWei("25", "gwei")
@@ -198,9 +199,13 @@ export default function Home() {
 
 
   useEffect(() => {
-    setWeb3(new Web3(window.web3.currentProvider, null, {
-      transactionConfirmationBlocks: 1
-    }))
+    try {
+      setWeb3(new Web3(window.web3.currentProvider, null, {
+        transactionConfirmationBlocks: 1
+      }))
+    } catch(e) {
+      setInstallMetamask(true)
+    }
 
   }, [])
 
@@ -213,7 +218,9 @@ export default function Home() {
         connect
       }
       className = "py-2 mt-20 mb-4 text-lg font-bold text-white rounded-lg w-56 bg-blue-600 hover:bg-blue-800" > Connect to MetaMask < /button>
-    } <
+    }
+    {installMetamask && (<a href="https://metamask.io/download" rel="noreferrer"> Install Metamask </a>)}
+     <
     p > {
       active ? < span > < /span> : <span>Wallet not connected, please hit Connect button</span >
     } <
