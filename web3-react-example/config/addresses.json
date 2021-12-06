@@ -1,0 +1,34 @@
+[
+  {
+    "netId": 1,
+    "aave": {
+      "address": "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9"
+    }
+  },
+  {
+    "netId": 43113,
+    "name": "fuji",
+    "qiAvax": {
+      "address": "0x219990FA1f91751539c65aE3f50040C6701cF219"
+    },
+    "pangolinRouter": {
+      "address": "0x2D99ABD9008Dc933ff5c0CD271B88309593aB921"
+    },
+    "yieldYakAave":{
+      "address": "0x957Ca4a4aA7CDc866cf430bb140753F04e273bC0"
+    }
+  },
+  {
+    "netId": 43114,
+    "name": "avalanche",
+    "qiAvax": {
+      "address": "0x5C0401e81Bc07Ca70fAD469b451682c0d747Ef1c"
+    },
+    "pangolinRouter": {
+      "address": "0x2D99ABD9008Dc933ff5c0CD271B88309593aB921"
+    },
+    "yieldYakAave":{
+      "address": "0x957Ca4a4aA7CDc866cf430bb140753F04e273bC0"
+    }
+  }
+]
