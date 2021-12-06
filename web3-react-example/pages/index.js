@@ -166,7 +166,7 @@ export default function Home() {
     const qiAvaxAddress = addresses.filter(e => e.netId == chainId)[0].qiAvax.address
     const qiAvaxABI = require('../config/abi/qiAvax.json')
     setQiAvaxContract(new web3.eth.Contract(qiAvaxABI, qiAvaxAddress))
-  }, [chainId, currentTransaction])
+  }, [chainId, currentTransaction, web3])
 
   // Getting qiAvax balanceOf
   useEffect(() => {
